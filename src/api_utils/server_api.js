@@ -1,6 +1,6 @@
 import axios from "axios"
 
-let url = "http://localhost:7777"
+let url = import.meta.env.VITE_BE_URL
 export let adduserapi = async (userdata) => {
     try {
         let response = await axios.post(`${url}/register`, userdata)
